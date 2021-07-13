@@ -1,0 +1,10 @@
+{% extends 'poke/index.html' %}
+
+{% block content %}
+    <a href="{% url 'poke:allplayers' %}">All players</a>
+    <a href="{% url 'poke:logout' %}">Exit</a>
+    <h1>Choose a pokemon</h1>
+    {% for p in pokes %}
+        <a href="{% url 'poke:chosenpoke' p %}"><p>{{ p }}</p></a>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'poke/index.html' %}
+
+{% block content %}
+    <table style="width: 100%; border: 2px solid;">
+        <tr>
+            <th>Player</th>
+            <th>Pokemons</th>
+        </tr>
+        {% for u, p in usersDict.items %}
+        <tr style="text-align: center;">
+            <td>{{ u }}</td>
+            <td>{{ p }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
