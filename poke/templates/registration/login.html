@@ -8,12 +8,14 @@
 </head>
 <body>
     {% block content %}
+        <h1>Login</h1>
         <form method="POST">
             {% csrf_token %}
 
             {{ form.as_p }}
-            <button type="submit">Submit</button>
+            <button type="submit">Login</button>
         </form>
+        <a href="{% url 'poke:register' %}"><button>Register</button></a>
     {% endblock %}
 </body>
 </html>

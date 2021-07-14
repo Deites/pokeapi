@@ -7,4 +7,7 @@
     {% for p in pokes %}
         <a href="{% url 'poke:chosenpoke' p %}"><p>{{ p }}</p></a>
     {% endfor %}
+    <a href="?{{ previous }}"><button>Previous page</button></a>
+    <a href="?{{ next }}"><button>Next page</button></a>
+
 {% endblock %}
